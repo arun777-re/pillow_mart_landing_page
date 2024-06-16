@@ -1,0 +1,290 @@
+header {
+  background-color: #fff;
+  margin-left: 5rem;
+  width: 94vw;
+  position: relative;
+
+  > nav {
+    @include flex(row, center, space-between, 0rem);
+    position: relative;
+    padding: 2rem;
+    z-index: 1000;
+    float: none;
+
+    background-color: #fff;
+    .logo img {
+      display: block;
+    }
+
+    .navigation ul {
+      @include flex(row, center, space-between, 3.6rem);
+      position: relative;
+      z-index: 1000;
+
+      > li {
+        list-style: none;
+        text-decoration: none;
+
+        > .pg-dropdown {
+          top: 17%;
+          position: fixed;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          padding: 10px;
+          background-color: #b08ead;
+          border-radius: 0px 10px 0px 10px;
+          animation: pg-dropdown 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          > .dropdown {
+            border-radius: 7px;
+            > ul {
+              list-style: none;
+              padding: 0;
+              margin: 0;
+              li {
+                margin-bottom: 10px;
+                white-space: nowrap;
+                line-height: 9px;
+
+                > a {
+                  color: #fff;
+                  font-size: 14px;
+                  text-decoration: none;
+                  &:hover {
+                    color: rgb(243, 243, 197);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .extras {
+      @include flex(row, center, center, 2.3rem);
+      .nav-icons {
+        cursor: pointer;
+        font-size: 28px;
+        margin-top: 3px;
+        color: rgb(53, 52, 52);
+        font-weight: 500;
+        transition: color 0.5s;
+        &:hover {
+          color: var(--purple);
+        }
+      }
+    }
+  }
+
+  .search-bar {
+    animation: search-bar 1s cubic-bezier(0.215, 0.46, 0.45, 0.94) both;
+    @include flex;
+    z-index: 1000;
+    margin-top: 15px;
+    top: 15%;
+    position: fixed;
+    width: inherit;
+    visibility: visible;
+    border-radius: 5px;
+    background-color: #b08ead;
+
+    > input {
+      width: inherit;
+      height: 100%;
+      padding: 1rem;
+      border: none;
+      background-color: #b08ead;
+    }
+
+    .search-icon {
+      cursor: pointer;
+      font-size: 28px;
+      margin-top: 3px;
+      color: #fff;
+      font-weight: 500;
+      margin-right: 10px;
+    }
+  }
+}
+
+.search-bar > input::placeholder {
+  color: white; /* Set the placeholder color to white */
+}
+
+.search-bar-off {
+  animation: search-bar-reverse 1s cubic-bezier(0.215, 0.46, 0.45, 0.94) both;
+  @include flex;
+  z-index: 0;
+  margin-right: 25px;
+  position: fixed;
+  width: inherit;
+  border-radius: 5px;
+  background-color: #b08ead;
+  > input {
+    width: inherit;
+    height: 100%;
+    padding: 1rem;
+    border: none;
+    background-color: #b08ead;
+  }
+  .search-icon {
+    visibility: hidden;
+  }
+}
+
+.nav-animation {
+  animation: nav-animation 0.5s cubic-bezier(0.215, 0.46, 0.45, 0.94) both;
+  background-color: #fff;
+  margin-left: 5rem;
+  width: 94vw;
+  position: relative;
+  top: 0%;
+  z-index: 1000;
+  transition:1s ease-in;
+
+  > nav {
+    @include flex(row, center, space-between, 0rem);
+    position: relative;
+    padding: 2rem;
+    z-index: 10000;
+    float: none;
+    width: 100%;
+    background-color: #fff;
+    .logo img {
+      display: block;
+    }
+
+    .navigation ul {
+      @include flex(row, center, space-between, 3.6rem);
+      position: relative;
+
+      > li {
+        list-style: none;
+        text-decoration: none;
+        > .pg-dropdown {
+          top: 100%;
+          position: fixed;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          padding: 10px;
+          background-color: #b08ead;
+          border-radius: 0px 10px 0px 10px;
+          animation: pg-dropdown 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          > .dropdown {
+            border-radius: 7px;
+            > ul {
+              list-style: none;
+              padding: 0;
+              margin: 0;
+              li {
+                margin-bottom: 10px;
+                white-space: nowrap;
+                line-height: 9px;
+
+                > a {
+                  color: #fff;
+                  font-size: 14px;
+                  text-decoration: none;
+                  &:hover {
+                    color: rgb(243, 243, 197);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .extras {
+      @include flex(row, center, center, 2.3rem);
+      .nav-icons {
+        cursor: pointer;
+        font-size: 28px;
+        margin-top: 3px;
+        color: rgb(53, 52, 52);
+        font-weight: 500;
+        transition: color 0.5s;
+        &:hover {
+          color: var(--purple);
+        }
+      }
+    }
+  }
+
+  .search-bar {
+    animation: search-bar 1s cubic-bezier(0.215, 0.46, 0.45, 0.94) both;
+    @include flex;
+    z-index: 10000;
+    margin-top: 45px;
+    top: 58%;
+    position:fixed;
+    width: inherit;
+    visibility: visible;
+    border-radius: 5px;
+    background-color: #b08ead;
+
+    > input {
+      width: inherit;
+      height: 100%;
+      padding: 1rem;
+      border: none;
+      background-color: #b08ead;
+    }
+
+    .search-icon {
+      cursor: pointer;
+      font-size: 28px;
+      margin-top: 3px;
+      color: #fff;
+      font-weight: 500;
+      margin-right: 10px;
+    }
+  }
+}
+
+@keyframes search-bar {
+  0% {
+    transform: translateY(-100%);
+    background-color: transparent;
+    opacity: 0;
+    z-index: 0;
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes search-bar-reverse {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes pg-dropdown {
+  0% {
+    transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(0deg) translateY(0) skewY(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes nav-animation {
+  0% {
+    transform: translateY(-100%);
+    background-color: transparent;
+  }
+
+  100% {
+    transform: translateY(0);
+    background-color: #fff;
+    position: sticky;
+  }
+}

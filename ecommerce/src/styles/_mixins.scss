@@ -1,0 +1,60 @@
+
+@mixin flex($dir:row,$alignItems:center,$justifyContent:center,
+$gap:0){
+   display: flex;
+   flex-direction:$dir;
+   align-items: $alignItems;
+   justify-content: $justifyContent;
+   gap: $gap;
+}
+
+@mixin grid($col:1fr,$gap:1rem,$row:unset){
+    display: grid;
+    place-items: center;
+    grid-template-columns: $col;
+    grid-template-rows: $row;
+    gap: $gap;
+}
+
+@mixin posCenter(){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@mixin posCenter1(){
+    position: absolute;
+    margin: 0 auto;
+}
+
+
+@mixin margin($ml:5rem,$mr:0){
+  margin-left: $ml;
+  margin-right: $mr;
+}
+
+@mixin square($h:100px,$w:100px){
+    height: $h;
+    width: $w;
+    border-radius: 50%;
+}
+
+@mixin heading($fs:50px,$h:1.3){
+font-size: $fs;
+line-height: $h;
+margin-bottom: 15px;
+font-weight: 700;
+color: #4b3049;
+letter-spacing: 3px;
+}
+
+@mixin paragraph($h:1.5,$fs:20px,$fw:400){
+   line-height: $h;
+   font-size: $fs;
+   color: #795376;
+   font-weight: $fw;
+   font-family: "Rubik",sans-serif;
+   margin-bottom: 0px;
+   letter-spacing: 2px;
+}

@@ -1,0 +1,76 @@
+.footer{
+    @include flex(column,unset,space-between,0rem);
+    background-color: #f4edf278;
+  
+    .footer-1{
+         margin-left: 5rem;
+     
+        @include flex(row,center,space-evenly,0rem);
+        width: 94%;
+        padding: 70px 35px;
+        .footer-1-1{
+            @include flex(row,center,space-evenly,3rem);
+             width: 100%;
+            > .footer-navigation ul {
+                padding: 0 15px 0 15px;
+                width: 100%;
+              @include flex(row,center,spacde-between,3rem);
+
+              >li{
+                list-style: none;
+
+                > a{
+                    display: inline-block;
+                    font-size: 17px;
+                    font-weight: 450;
+                    opacity: 1;
+                    color: #483049;
+                    transition: opacity 1s ease;
+                    background-color: transparent;
+                    &:hover{
+                        opacity: 0.5;
+                        color:var(--purple);
+                    }
+                }
+              }
+            }
+        }
+
+        > .footer-icons {
+            @include flex(row,center,center,1rem);
+             width: 100%;
+             padding-left: 16rem;
+            > a{
+                @include square(45px,45px);
+                @include flex;
+                background-color: #4b3049;
+                font-size: 33px;
+                opacity: 1;
+                line-height: 45px;
+                    color: #fff;
+                    transition: opacity 1s ease;
+                    &:hover{
+                        opacity: 0.5;
+                        color:var(--purple);
+                    }
+            }
+        }
+    }
+
+    > .footer-2{
+        @include flex(row,center,space-between,4rem);
+        width: 100%;
+        padding: 3rem;
+        text-align: left;
+        background-color: #F4EDF2;
+        > p{
+            font-family: "Rubik", sans-serif;
+            font-size: 15px;
+            line-height: 2;
+            margin-bottom: 0;
+            font-weight: 400;
+            color: #795376;
+            line-height: 2;
+        }
+    }
+}
